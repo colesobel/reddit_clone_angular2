@@ -1,0 +1,26 @@
+<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title comment_form" id="myModalLabel">Add a Comment</h4>
+      </div>
+      <div class="modal-body">
+        <form name="commentForm" class="comment_form">
+            <br>
+            <label for="author">Author</label>
+            <input ng-minlength="2" name="author" type="text"  required class="form-control">
+            <label for="comment">Comment </label>
+            <input ng-minlength="5" name="comment" type="text"  required class="form-control">
+            <br>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit Comment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <form ng-cloak class="form" name="theForm">
+          <label for="title" class="dark-text">Title</label>
+          <input ng-minlength="2" name="title" ng-model="post.title" type="text"  required class="form-control">
+          <label class="dark-text" for="Author">Author </label>
+          <input ng-minlength="2" name="author" ng-model="post.author" type="text"  required class="form-control">
+          <label class="dark-text" for="img">Image URL </label>
+          <input name="img" ng-model="post.url" type="url" required class="form-control">
+          <label class="dark-text" for="description">Description</label>
+          <input ng-minlength="5" name="description" ng-model="post.description" type="text" required class="form-control">
+          <br>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

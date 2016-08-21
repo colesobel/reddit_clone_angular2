@@ -36,6 +36,15 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/components/header',
+  'app/components/post-list',
+  'app/components/post-item',
+  'app/components/post-footer',
+  'app/components/add-post-form',
+  'app/components/post-comment',
+  'app/components/comments',
+  'app/components/comments-list',
+  'app/components/comment-item',
   /** @cli-barrel */
 ];
 
