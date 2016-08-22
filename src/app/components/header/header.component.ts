@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { LogToConsoleService } from '../../services/log-to-console.service'
 
 @Component({
   moduleId: module.id,
   selector: 'rc-header',
   templateUrl: 'header.component.html',
-  styleUrls: ['header.component.css']
+  styleUrls: ['header.component.css'],
+  providers: [LogToConsoleService]
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  constructor(private logging: LogToConsoleService) {}
 
-  constructor() { }
-
-  ngOnInit() {
+  logTheShit(mess) {
+    this.logging.logShitOut(mess)
   }
 
 }
