@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -8,5 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent {
   constructor() {}
+  @Output() update = new EventEmitter()
+
+
+  ngOnInit() {
+    this.update.emit('')
+  }
 
 }
