@@ -10,17 +10,17 @@
       <div class="modal-body">
         <form ng-cloak class="form" name="theForm">
           <label for="title" class="dark-text">Title</label>
-          <input ng-minlength="2" name="title" ng-model="post.title" type="text"  required class="form-control">
+          <input ng-minlength="2" name="title" [(ngModel)]="title" type="text"  required class="form-control">
           <label class="dark-text" for="Author">Author </label>
-          <input ng-minlength="2" name="author" ng-model="post.author" type="text"  required class="form-control">
+          <input ng-minlength="2" name="author" [(ngModel)]="author" type="text"  required class="form-control">
           <label class="dark-text" for="img">Image URL </label>
-          <input name="img" ng-model="post.url" type="url" required class="form-control">
+          <input name="img" [(ngModel)]="image" type="url" required class="form-control">
           <label class="dark-text" for="description">Description</label>
-          <input ng-minlength="5" name="description" ng-model="post.description" type="text" required class="form-control">
+          <input ng-minlength="5" name="description" [(ngModel)]="description" type="text" required class="form-control">
           <br>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="addPost()">Submit</button>
           </div>
         </form>
       </div>
