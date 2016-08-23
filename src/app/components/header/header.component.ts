@@ -10,7 +10,7 @@ import { OrderByTermService } from '../../services/order-by-term.service'
 })
 export class HeaderComponent {
   constructor(private searchTermService: SearchTermService, private orderByTermService: OrderByTermService) {}
-  orderByTerm = ''
+  orderByTerm = 'date'
 
   onChange(term) {
     this.searchTermService.updateSearchTerm(term)
@@ -20,6 +20,7 @@ export class HeaderComponent {
   onOrderChange(newTerm) {
     this.orderByTermService.changeTerm(newTerm)
     this.orderByTermService.exportTerm(newTerm)
+    this.orderByTerm = newTerm
   }
 
   @Output() update = new EventEmitter()
