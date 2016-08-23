@@ -3,6 +3,7 @@ import { Post } from '../../classes/post'
 import { PostCommentComponent } from '../post-comment'
 import { CommentsListComponent } from '../comments-list'
 
+
 @Component({
   moduleId: module.id,
   selector: 'rc-post-item',
@@ -11,5 +12,8 @@ import { CommentsListComponent } from '../comments-list'
   directives: [PostCommentComponent, CommentsListComponent]
 })
 export class PostItemComponent {
+
+
   @Input() postDetail: Post
+
 }

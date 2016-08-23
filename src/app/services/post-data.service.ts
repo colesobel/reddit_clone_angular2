@@ -26,4 +26,9 @@ export class PostDataService {
     return this.posts
   }
 
+  addComment(postTitle, comment:PostComment) {
+  let post = this.posts.filter(post => post.title == postTitle)[0]
+  post.comments.push(comment)
+  }
+
 }

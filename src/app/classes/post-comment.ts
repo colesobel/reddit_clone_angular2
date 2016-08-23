@@ -1,5 +1,5 @@
 export class PostComment {
-    constructor(public comment: string, public author: string) {
+    constructor(public author: string, public comment: string) {
 
     }
 }

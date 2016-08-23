@@ -10,14 +10,14 @@
       <div class="modal-body">
         <form name="commentForm" class="comment_form">
             <br>
-            <label for="author">Author</label>
-            <input ng-minlength="2" name="author" type="text"  required class="form-control">
             <label for="comment">Comment </label>
-            <input ng-minlength="5" name="comment" type="text"  required class="form-control">
+            <input ng-minlength="5" name="comment" type="text" [(ngModel)]="comment" required class="form-control">
+            <label for="author">Author</label>
+            <input ng-minlength="2" name="author" [(ngModel)]="author" type="text"  required class="form-control">
             <br>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit Comment</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="addCommentToPost(title)">Submit Comment</button>
           </div>
         </form>
       </div>

@@ -17,7 +17,7 @@
     <span class="clickable" (click)="postDetail.showComments = !postDetail.showComments"><i class="fa fa-comment" aria-hidden="true"></i> {{postDetail.comments.length}} Comments </span> | 
     <span class="clickable"  data-toggle="modal" data-target="#commentModal"> <i class="fa fa-pencil" aria-hidden="true"> </i> Add Comment</span>
     <rc-comments-list *ngIf="postDetail.showComments" [comments]="postDetail.comments"></rc-comments-list>
-    <rc-post-comment></rc-post-comment>
+    <rc-post-comment [title]="postDetail.title"></rc-post-comment>
     </div>
   </div>
 </div>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { PostDataService } from '../../services/post-data.service'
+import { PostComment } from '../../classes/post-comment'
 
 @Component({
   moduleId: module.id,
@@ -8,8 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostCommentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private addAComment: PostDataService) {}
 
+  comment = ''
+  author = ''
+
+  @Input() title;
+
+  addCommentToPost(title) {
+    this.addAComment.addComment(title, new PostComment(this.author, this.comment))
+    this.comment = ''
+    this.author = ''
+
+  }
   ngOnInit() {
   }
 
